@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/ly_top_bar1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/transparent">
+
+        <TextView
+            android:id="@+id/txt_topbar1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="信息"
+            android:textColor="@color/text_yellow"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white" />
+
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_tab_bar1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_channel1"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_channel1"
+            android:text="呵呵" />
+
+        <RadioButton
+            android:id="@+id/rb_message1"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_message1"
+            android:text="哈哈" />
+
+        <RadioButton
+            android:id="@+id/rb_better1"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_better1"
+            android:text="嘎嘎" />
+
+        <RadioButton
+            android:id="@+id/rb_setting1"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_setting1"
+            android:text="跪了"/>
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/div_tab_bar1"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_above="@id/rg_tab_bar1"
+        android:background="@color/white" />
+
+    <FrameLayout
+        android:id="@+id/ly_content1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/div_tab_bar1"
+        android:layout_below="@id/ly_top_bar1">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New RadioButton"
+            android:id="@+id/radioButton"
+            android:layout_gravity="center_horizontal|top"
+            android:drawableTop="@drawable/tab_menu_setting1"
+            android:button="@null"
+            android:checked="false" />
+    </FrameLayout>
+
+</RelativeLayout>

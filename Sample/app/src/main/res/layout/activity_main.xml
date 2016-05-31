@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".activities.MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ShiPeiQi"
+        android:id="@+id/button"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/适配器2"
+        android:id="@+id/button2"
+        android:layout_below="@+id/button"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtText"
+        android:hint="呵呵"
+        android:layout_alignBottom="@+id/btnTest"
+        android:layout_toLeftOf="@+id/btnTest"
+        android:layout_toStartOf="@+id/btnTest" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="拨号"
+        android:id="@+id/btnTest"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="23dp"
+        android:layout_marginEnd="23dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="滕王阁序"
+        android:id="@+id/btnTengWangGe"
+        android:layout_gravity="left|top"
+        android:layout_below="@+id/button2"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtToast"
+        android:hint="输入后按回车"
+        android:layout_below="@+id/edtText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/edtText"
+        android:layout_alignStart="@+id/edtText" />
+
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgBtn"
+        android:src="@mipmap/ic_launcher"
+        android:background="#f68484"
+        android:alpha="50"
+        android:layout_below="@+id/btnTengWangGe"
+        android:layout_alignLeft="@+id/btnTengWangGe"
+        android:layout_alignStart="@+id/btnTengWangGe"
+        android:layout_alignRight="@+id/btnTengWangGe"
+        android:layout_alignEnd="@+id/btnTengWangGe"
+        android:contentDescription="@string/图按" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgV"
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@+id/imgBtn"
+        android:layout_alignLeft="@+id/imgBtn"
+        android:layout_alignStart="@+id/imgBtn"
+        android:layout_alignRight="@+id/imgBtn"
+        android:layout_alignEnd="@+id/imgBtn"
+        android:contentDescription="@string/图片"
+        android:contextClickable="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/得不到"
+        android:id="@+id/chk1"
+        android:checked="false"
+        android:layout_alignTop="@+id/edtText"
+        android:layout_toRightOf="@+id/button"
+        android:layout_toEndOf="@+id/button" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/已失去"
+        android:id="@+id/chk2"
+        android:checked="false"
+        android:layout_below="@+id/chk1"
+        android:layout_toRightOf="@+id/button"
+        android:layout_toEndOf="@+id/button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/测试TextView"
+        android:id="@+id/btnTestNew"
+        android:layout_below="@+id/chk2"
+        android:layout_alignLeft="@+id/chk2"
+        android:layout_alignStart="@+id/chk2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/测试TextView1"
+        android:id="@+id/btnTestNew1"
+        android:layout_below="@+id/imgV"
+        android:layout_alignLeft="@+id/imgV"
+        android:layout_alignStart="@+id/imgV" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/测试TextView2"
+        android:id="@+id/btnTestNew2"
+        android:layout_below="@+id/btnTestNew"
+        android:layout_toRightOf="@+id/btnTengWangGe"
+        android:layout_toEndOf="@+id/btnTengWangGe" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/适配器3"
+        android:id="@+id/btnBaseLv"
+        android:layout_below="@+id/btnTestNew1"
+        android:layout_alignLeft="@+id/btnTestNew1"
+        android:layout_alignStart="@+id/btnTestNew1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="更新LV"
+        android:id="@+id/btnUpdateLV"
+        android:layout_below="@+id/btnTestNew2"
+        android:layout_alignLeft="@+id/btnTestNew2"
+        android:layout_alignStart="@+id/btnTestNew2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GridView"
+        android:id="@+id/btnGridView"
+        android:layout_below="@+id/btnUpdateLV"
+        android:layout_alignRight="@+id/btnUpdateLV"
+        android:layout_alignEnd="@+id/btnUpdateLV" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="列表选项框"
+        android:id="@+id/btnSpinner"
+        android:layout_below="@+id/btnBaseLv"
+        android:layout_alignLeft="@+id/btnBaseLv"
+        android:layout_alignStart="@+id/btnBaseLv"
+        android:layout_toLeftOf="@+id/btnUpdateLV"
+        android:layout_toStartOf="@+id/btnUpdateLV" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="折叠列表"
+        android:id="@+id/btnExpand"
+        android:layout_below="@+id/btnSpinner"
+        android:layout_alignLeft="@+id/btnSpinner"
+        android:layout_alignStart="@+id/btnSpinner" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="翻转视图"
+        android:id="@+id/btnFlipper"
+        android:layout_alignTop="@+id/btnExpand"
+        android:layout_alignLeft="@+id/btnGridView"
+        android:layout_alignStart="@+id/btnGridView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="翻转视图0"
+        android:id="@+id/btnFlipper0"
+        android:layout_below="@+id/btnExpand"
+        android:layout_alignLeft="@+id/btnExpand"
+        android:layout_alignStart="@+id/btnExpand" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="翻转视图2"
+        android:id="@+id/btnFlipper2"
+        android:layout_below="@+id/button2"
+        android:layout_alignLeft="@+id/edtToast"
+        android:layout_alignStart="@+id/edtToast" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="滑动视图"
+        android:id="@+id/btnViewPager"
+        android:layout_below="@+id/btnFlipper2"
+        android:layout_alignLeft="@+id/btnFlipper2"
+        android:layout_alignStart="@+id/btnFlipper2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="滑动视图1"
+        android:id="@+id/btnViewPager1"
+        android:layout_below="@+id/btnViewPager"
+        android:layout_alignLeft="@+id/btnViewPager"
+        android:layout_alignStart="@+id/btnViewPager" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="滑动视图2"
+        android:id="@+id/btnViewPager2"
+        android:layout_below="@+id/btnViewPager1"
+        android:layout_alignLeft="@+id/btnViewPager1"
+        android:layout_alignStart="@+id/btnViewPager1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="碎片"
+        android:id="@+id/btnFragment1"
+        android:layout_below="@+id/btnFragment2"
+        android:layout_alignRight="@+id/btnGridView"
+        android:layout_alignEnd="@+id/btnGridView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="碎片1"
+        android:id="@+id/btnFragment2"
+        android:layout_below="@+id/btnRecycler"
+        android:layout_alignRight="@+id/btnGridView"
+        android:layout_alignEnd="@+id/btnGridView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="碎片2"
+        android:id="@+id/btnFragment3"
+        android:layout_above="@+id/btnFlipper0"
+        android:layout_alignLeft="@+id/btnToolbar"
+        android:layout_alignStart="@+id/btnToolbar" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="碎片4"
+        android:id="@+id/btnFragment4"
+        android:layout_below="@+id/btnFragment3"
+        android:layout_alignLeft="@+id/btnFragment3"
+        android:layout_alignStart="@+id/btnFragment3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Snackbar"
+        android:id="@+id/btnSnackbar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/btnGridView"
+        android:layout_alignEnd="@+id/btnGridView" />
+
+    <android.support.design.widget.FloatingActionButton
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/a"
+        android:id="@+id/btnFloatAct"
+        app:backgroundTint="@color/text_yellow"
+        app:rippleColor="@color/blue"
+        app:borderWidth="0dp"
+        app:fabSize="mini"
+        app:elevation="50dp"
+        app:pressedTranslationZ="20dp"
+        android:layout_below="@+id/btnFragment1"
+        android:layout_alignRight="@+id/view"
+        android:layout_alignEnd="@+id/view" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/view"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <android.support.design.widget.FloatingActionButton
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:src="@drawable/bg_num"
+            android:id="@+id/btnFloatAct1"
+            app:backgroundTint="@color/text_yellow"
+            app:borderWidth="0dp"
+            app:elevation="20dp"
+            app:fabSize="normal"
+            app:pressedTranslationZ="10dp"
+            app:rippleColor="#FF0000FF"
+            android:layout_above="@+id/btnSnackbar"
+            android:layout_alignRight="@+id/view"
+            android:layout_alignEnd="@+id/view" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TabLayout"
+        android:id="@+id/btnTabLayout"
+        android:layout_alignTop="@+id/btnFlipper2"
+        android:layout_toRightOf="@+id/btnFlipper2"
+        android:layout_alignRight="@+id/edtToast"
+        android:layout_alignEnd="@+id/edtToast" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="折叠导航"
+        android:id="@+id/btnZD"
+        android:layout_below="@+id/btnTabLayout"
+        android:layout_toRightOf="@+id/btnViewPager"
+        android:layout_toEndOf="@+id/btnViewPager" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="图片浏览"
+        android:id="@+id/btnRecycler"
+        android:layout_below="@+id/btnZD"
+        android:layout_alignLeft="@+id/btnZD"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="工具栏"
+        android:id="@+id/btnToolbar"
+        android:layout_below="@+id/btnViewPager2"
+        android:layout_alignLeft="@+id/btnViewPager2"
+        android:layout_alignStart="@+id/btnViewPager2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="图形"
+        android:id="@+id/btnDrawble"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@+id/btnZD"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/btnRecycler"
+         />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="图形1"
+        android:id="@+id/btnDrawble1"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@+id/btnZD"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/btnDrawble"
+        />
+
+
+</RelativeLayout>

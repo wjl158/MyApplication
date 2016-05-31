@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/ly_top_bar4"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/blue">
+
+        <TextView
+            android:id="@+id/txt_topbar4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="信息"
+            android:textColor="@color/text_yellow"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/text_yellow" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ly_tab_menu4"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ly_tab_menu_channel4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tab_menu_channel4"
+                    style="@style/tab_menu_text"
+                    android:drawableTop="@drawable/tab_menu_channel"
+                    android:text="呵呵" />
+
+                <TextView
+                    android:id="@+id/tab_menu_channel_num4"
+                    style="@style/tab_menu_bgnum"
+                    android:layout_toRightOf="@+id/tab_menu_channel4"
+                    android:text="99+"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_tab_menu_message4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tab_menu_message4"
+                    style="@style/tab_menu_text"
+                    android:drawableTop="@drawable/tab_menu_message"
+                    android:text="哈哈" />
+
+                <TextView
+                    android:id="@+id/tab_menu_message_num4"
+                    style="@style/tab_menu_bgnum"
+                    android:layout_toRightOf="@+id/tab_menu_message4"
+                    android:text="99+"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ly_tab_menu_better4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tab_menu_better4"
+                    style="@style/tab_menu_text"
+                    android:drawableTop="@drawable/tab_menu_better"
+                    android:text="跪了" />
+
+                <TextView
+                    android:id="@+id/tab_menu_better_num4"
+                    style="@style/tab_menu_bgnum"
+                    android:layout_toRightOf="@+id/tab_menu_better4"
+                    android:text="99+"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ly_tab_menu_setting4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tab_menu_setting4"
+                    style="@style/tab_menu_text"
+                    android:drawableTop="@drawable/tab_menu_setting"
+                    android:text="嘎嘎" />
+
+                <ImageView
+                    android:id="@+id/tab_menu_setting_partner4"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="-5dp"
+                    android:layout_toRightOf="@id/tab_menu_setting4"
+                    android:visibility="gone"
+                    android:src="@drawable/partner_red" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/div_tab_bar4"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_above="@id/ly_tab_menu4"
+        android:background="@color/text_yellow" />
+
+
+    <FrameLayout
+        android:id="@+id/ly_content4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/div_tab_bar4"
+        android:layout_below="@id/ly_top_bar4"/>
+
+
+</RelativeLayout>

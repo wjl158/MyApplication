@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="这是simplecursoradapter的一个例子" >
+    </TextView>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView" />
+
+</LinearLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+
+<!--<ScrollView android:id="@+id/ScrollView01"-->
+    <!--android:layout_width="wrap_content" android:layout_height="wrap_content"-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android">-->
+    <!--<TableLayout android:id="@+id/TableLayout01"-->
+        <!--android:layout_width="fill_parent" android:layout_height="fill_parent"-->
+        <!--android:stretchColumns="0" xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+        <!--<TableRow android:layout_width="fill_parent"-->
+            <!--android:layout_height="30dip">-->
+            <!--<TextView android:text="色彩透明度测试" android:textSize="18dip"-->
+                <!--android:layout_span="2" android:layout_gravity="center"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+
+        <!--</TableRow>-->
+
+        <!--<TableRow android:layout_width="fill_parent"-->
+            <!--android:layout_height="30dip">-->
+            <!--<TextView android:background="#ff00ff00"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+            <!--<TextView android:text="#ff00ff00" android:background="#000"-->
+                <!--android:textSize="30dip" android:textColor="#fff"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+        <!--</TableRow>-->
+
+        <!--<TableRow android:layout_width="fill_parent"-->
+            <!--android:layout_height="30dip">-->
+            <!--<TextView android:background="#ee00ff00"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+            <!--<TextView android:text="#ee00ff00" android:background="#000"-->
+                <!--android:textSize="30dip" android:textColor="#fff"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+        <!--</TableRow>-->
+
+        <!--<TableRow android:layout_width="fill_parent"-->
+            <!--android:layout_height="30dip">-->
+            <!--<TextView android:background="#dd00ff00"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+            <!--<TextView android:text="#dd00ff00" android:background="#000"-->
+                <!--android:textSize="30dip" android:textColor="#fff"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+        <!--</TableRow>-->
+
+        <!--<TableRow android:layout_width="fill_parent"-->
+            <!--android:layout_height="30dip">-->
+            <!--<TextView android:background="#cc00ff00"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+            <!--<TextView android:text="#cc00ff00" android:background="#000"-->
+                <!--android:textSize="30dip" android:textColor="#fff"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+        <!--</TableRow>-->
+
+        <!--<TableRow android:layout_width="fill_parent"-->
+            <!--android:layout_height="30dip">-->
+            <!--<TextView android:background="#bb00ff00"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+            <!--<TextView android:text="#bb00ff00" android:background="#000"-->
+                <!--android:textSize="30dip" android:textColor="#fff"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+        <!--</TableRow>-->
+
+        <!--<TableRow android:layout_width="fill_parent"-->
+            <!--android:layout_height="30dip">-->
+            <!--<TextView android:background="#aa00ff00"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+            <!--<TextView android:text="#aa00ff00" android:background="#000"-->
+                <!--android:textSize="30dip" android:textColor="#fff"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+        <!--</TableRow>-->
+
+        <!--<TableRow android:layout_width="fill_parent"-->
+            <!--android:layout_height="30dip">-->
+            <!--<TextView android:background="#9900ff00"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+            <!--<TextView android:text="#9900ff00" android:background="#000"-->
+                <!--android:textSize="30dip" android:textColor="#fff"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+        <!--</TableRow>-->
+
+        <!--<TableRow android:layout_width="fill_parent"-->
+            <!--android:layout_height="30dip">-->
+            <!--<TextView android:background="#8800ff00"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+            <!--<TextView android:text="#8800ff00" android:background="#000"-->
+                <!--android:textSize="30dip" android:textColor="#fff"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+        <!--</TableRow>-->
+
+        <!--<TableRow android:layout_width="fill_parent"-->
+            <!--android:layout_height="30dip">-->
+            <!--<TextView android:background="#7700ff00"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+            <!--<TextView android:text="#7700ff00" android:background="#000"-->
+                <!--android:textSize="30dip" android:textColor="#fff"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+        <!--</TableRow>-->
+
+        <!--<TableRow android:layout_width="fill_parent"-->
+            <!--android:layout_height="30dip">-->
+            <!--<TextView android:background="#6600ff00"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+            <!--<TextView android:text="#6600ff00" android:background="#000"-->
+                <!--android:textSize="30dip" android:textColor="#fff"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+        <!--</TableRow>-->
+
+        <!--<TableRow android:layout_width="fill_parent"-->
+            <!--android:layout_height="30dip">-->
+            <!--<TextView android:background="#5500ff00"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+            <!--<TextView android:text="#5500ff00" android:background="#000"-->
+                <!--android:textSize="30dip" android:textColor="#fff"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+        <!--</TableRow>-->
+
+        <!--<TableRow android:layout_width="fill_parent"-->
+            <!--android:layout_height="30dip">-->
+            <!--<TextView android:background="#4400ff00"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+            <!--<TextView android:text="#4400ff00" android:background="#000"-->
+                <!--android:textSize="30dip" android:textColor="#fff"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+        <!--</TableRow>-->
+
+        <!--<TableRow android:layout_width="fill_parent"-->
+            <!--android:layout_height="30dip">-->
+            <!--<TextView android:background="#3300ff00"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+            <!--<TextView android:text="#3300ff00" android:background="#000"-->
+                <!--android:textSize="30dip" android:textColor="#fff"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+        <!--</TableRow>-->
+
+        <!--<TableRow android:layout_width="fill_parent"-->
+            <!--android:layout_height="30dip">-->
+            <!--<TextView android:background="#2200ff00"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+            <!--<TextView android:text="#2200ff00" android:background="#000"-->
+                <!--android:textSize="30dip" android:textColor="#fff"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+        <!--</TableRow>-->
+
+        <!--<TableRow android:layout_width="fill_parent"-->
+            <!--android:layout_height="30dip">-->
+            <!--<TextView android:background="#1100ff00"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+            <!--<TextView android:text="#1100ff00" android:background="#000"-->
+                <!--android:textSize="30dip" android:textColor="#fff"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+        <!--</TableRow>-->
+
+        <!--<TableRow android:layout_width="fill_parent"-->
+            <!--android:layout_height="30dip">-->
+            <!--<TextView android:background="#0000ff00"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+            <!--<TextView android:text="#0000ff00" android:background="#000"-->
+                <!--android:textSize="30dip" android:textColor="#fff"-->
+                <!--android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+            <!--</TextView>-->
+        <!--</TableRow>-->
+
+        <!--<TextView android:text="色彩透明度测试" android:textSize="18dip"-->
+            <!--android:gravity="center_horizontal" android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content">-->
+        <!--</TextView>-->
+
+    <!--</TableLayout>-->
+<!--</ScrollView>-->
+

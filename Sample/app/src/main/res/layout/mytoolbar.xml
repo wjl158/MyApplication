@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/toolbar1"
+    android:layout_height="wrap_content"
+    android:background="@color/text_gray"
+    android:minHeight="?attr/actionBarSize"
+
+    app:navigationIcon ="@android:drawable/ic_input_delete"
+    app:title=" 还哈是" >
+    <!--<TextView-->
+        <!--android:id="@+id/toolbar_num"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="left"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:text="num"-->
+        <!--android:textColor="#fff"-->
+        <!--android:visibility="gone"-->
+        <!--android:textSize="16dp" />-->
+    <!--<com.hs.diskmanager.view.SegmentedGroup-->
+        <!--android:id="@+id/toolbar_segment"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--segmentedgroup:border_width="1dp"-->
+        <!--segmentedgroup:checked_text_color="#ff33b5e5"-->
+        <!--segmentedgroup:corner_radius="10dp"-->
+        <!--segmentedgroup:tint_color="@android:color/white" >-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/toolbar_phone"-->
+
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="One" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/toolbar_udisk"-->
+
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="Two" />-->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="50dp"
+        android:height="50dp"
+        android:text="我是一个按钮"/>
+    <!--</com.hs.diskmanager.view.SegmentedGroup>-->
+
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgBtn"
+        android:src="@mipmap/ic_launcher"
+        android:background="#f68484"
+        android:alpha="50"
+        android:contentDescription="@string/图按" />
+
+    <TextView
+        android:id="@+id/toolbar_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="16dp"
+        android:text="编辑"
+        android:textColor="#fff"
+        android:textSize="16dp" />
+
+</android.support.v7.widget.Toolbar>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.myapplication.activities.MenuActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_menu_test"
+        android:background="@color/text_yellow"></android.support.v7.widget.Toolbar>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="上下文菜单， 长按我显示，红色有子菜单"
+        android:gravity="center"
+        android:id="@+id/btn_menu_test1"
+        android:layout_below="@+id/toolbar_menu_test"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="popup菜单"
+        android:gravity="center"
+        android:id="@+id/btn_menu_popup"
+        android:layout_below="@+id/btn_menu_test1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="选择菜单改变颜色，菜单依赖于Toolbar才可以显示"
+        android:gravity="center"
+        android:id="@+id/tv_menu_test"
+        android:layout_below="@+id/btn_menu_popup"/>
+
+</RelativeLayout>

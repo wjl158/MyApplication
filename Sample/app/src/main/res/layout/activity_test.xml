@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Test"
+    android:gravity="center">
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="New Button"-->
+        <!--android:id="@+id/button3"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="128dp"-->
+        <!--android:gravity="center|center_horizontal" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/txtOne"-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="TextView(显示框)"-->
+        <!--android:textColor="#EA5246"-->
+        <!--android:textStyle="bold|italic"-->
+        <!--android:background="#000000"-->
+        <!--android:textSize="18sp"-->
+        <!--android:shadowColor="#fefafa"-->
+        <!--android:shadowRadius="#416c80"-->
+        <!--/>-->
+
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+        android:shadowColor="#f90000"
+      android:shadowDx="10.0"
+      android:shadowDy="10.0"
+      android:shadowRadius="3.0"
+      android:text="带阴影的TextView"
+    android:textColor="#4A4AFF"
+     android:textSize="30sp"
+        android:autoText="false"
+        android:id="@+id/textView3"
+        android:drawableTint="#dc9d9d"
+        android:editable="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="44dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginTop="38dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:textSize="30sp"
+        android:id="@+id/textView2"
+        android:background="@drawable/txt_rectborder"
+        android:layout_below="@+id/textView3"
+        android:layout_alignRight="@+id/textView5"
+        android:layout_alignEnd="@+id/textView5"
+        android:layout_marginTop="53dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/loading_13"
+        android:drawableLeft="@drawable/loading_12"
+        android:drawableRight="@drawable/loading_12"
+        android:drawableBottom="@drawable/loading_12"
+        android:drawablePadding="10dp"
+        android:text="张全蛋"
+        android:gravity="center"
+        android:id="@+id/txtZQD"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="15112386240"
+        android:id="@+id/textView5"
+        android:autoLink="all|phone|web|map|email"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="www.baidu.com"
+        android:id="@+id/textView6"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:autoLink="all" />
+
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".activities.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择您的排位分段"
+        android:textColor="#44BDED"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/spin_one"
+        android:layout_width="158dp"
+        android:layout_height="64dp"
+        android:entries="@array/data"
+        android:prompt="@string/适配器3"
+        android:spinnerMode="dialog" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="选择你的拿手英雄~"
+        android:textColor="#F5684A"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/spin_two"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_gravity="center_horizontal"
+        android:entries="@array/myarray"
+        android:spinnerMode="dropdown" />
+
+    <AutoCompleteTextView
+        android:id="@+id/atv_content"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:completionHint="请输入搜索内容"
+        android:completionThreshold="1"
+        android:dropDownHorizontalOffset="5dp" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/matv_content"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:completionThreshold="1"
+        android:dropDownHorizontalOffset="5dp"
+        android:text="" />
+
+</LinearLayout>

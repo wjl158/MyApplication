@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".activities.AnimActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_activity_anim_img"
+        android:src="@drawable/ic_my_02"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/v_activity_anim_h1"
+        android:background="@color/text_yellow"
+        android:layout_below="@id/img_activity_anim_img"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/v_activity_anim_h3"
+        android:background="@color/text_yellow"
+        android:layout_above="@id/img_activity_anim_img"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/v_activity_anim_h2"
+        android:background="@color/text_yellow"
+        android:layout_below="@id/v_activity_anim_h1"
+        android:layout_marginTop="88dp"
+        />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:id="@+id/v_activity_anim_v1"
+        android:background="@color/text_yellow"
+        android:layout_toRightOf="@id/img_activity_anim_img"
+        />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:id="@+id/v_activity_anim_v2"
+        android:background="@color/text_yellow"
+        android:layout_toRightOf="@+id/v_activity_anim_v1"
+        android:layout_marginLeft="88dp"
+        />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:id="@+id/v_activity_anim_v3"
+        android:background="@color/text_yellow"
+        android:layout_toRightOf="@+id/v_activity_anim_v2"
+        android:layout_marginLeft="88dp"
+        />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:id="@+id/v_activity_anim_v4"
+        android:background="@color/text_yellow"
+        android:layout_toLeftOf="@id/img_activity_anim_img"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="位移"
+        android:id="@+id/btn_activity_anim_BeginAnim"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="trans"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="透明"
+        android:id="@+id/btn_activity_anim_BeginAnim1"
+        android:layout_toRightOf="@id/btn_activity_anim_BeginAnim"
+        android:layout_alignParentBottom="true"
+        android:onClick="alpha"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="旋转"
+        android:id="@+id/btn_activity_anim_BeginAnim2"
+        android:layout_toRightOf="@id/btn_activity_anim_BeginAnim1"
+        android:layout_alignParentBottom="true"
+        android:onClick="rotate"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="缩放"
+        android:id="@+id/btn_activity_anim_BeginAnim3"
+        android:layout_toRightOf="@id/btn_activity_anim_BeginAnim2"
+        android:layout_alignParentBottom="true"
+        android:onClick="scale"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="动画集合"
+        android:id="@+id/btn_activity_anim_BeginAnim4"
+        android:onClick="more"
+        android:layout_above="@+id/btn_activity_anim_BeginAnim"
+        android:layout_alignLeft="@+id/btn_activity_anim_BeginAnim"
+        android:layout_alignStart="@+id/btn_activity_anim_BeginAnim"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xml属性动画"
+        android:id="@+id/btn_activity_anim_BeginAnim5"
+        android:onClick="xmldonghua"
+        android:layout_above="@+id/btn_activity_anim_BeginAnim1"
+        android:layout_toRightOf="@+id/btn_activity_anim_BeginAnim4"
+        android:layout_toEndOf="@+id/btn_activity_anim_BeginAnim4"
+        android:textAllCaps="false"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/linearlayout_activity_anim_1"
+        android:background="@color/text_gray"
+
+        >
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:src="@drawable/js7"/>
+    </LinearLayout>
+
+</RelativeLayout>
