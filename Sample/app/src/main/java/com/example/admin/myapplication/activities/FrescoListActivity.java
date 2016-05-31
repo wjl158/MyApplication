@@ -71,7 +71,7 @@ public class FrescoListActivity extends AppCompatActivity {
 
         }
         setMyAdadpter();
-        searchPicture("纯阳");
+//        searchPicture("纯阳");
 
 //        mDatas.add(new MyData(Uri.parse("http://imgsrc.baidu.com/forum/w%3D580/sign=2000aa6d339b033b2c88fcd225ce3620/80fb2a13b07eca8091128e8e962397dda04483ab.jpg")));
 //        mDatas.add(new MyData(Uri.parse("res://com.example.admin.myapplication/" + R.drawable.js1)));
