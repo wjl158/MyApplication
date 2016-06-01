@@ -295,6 +295,24 @@ public class RxJavaWeatherActivity extends AppCompatActivity implements View.OnC
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
+ 一、Scheduler线程切换
+
+ 这种场景经常会在“后台线程取数据，主线程展示”的模式中看见
+
+ Observable.just(1, 2, 3, 4)
+            .subscribeOn(Schedulers.io()) // 指定 subscribe() 发生在 IO 线程
+            .observeOn(AndroidSchedulers.mainThread()) // 指定 Subscriber 的回调发生在主线程
+            .subscribe(new Action1<Integer>() {
+        @Override
+        public void call(Integer number) {
+            Log.d(tag, "number:" + number);
+        }
+    });
+
+ */
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
@@ -333,6 +351,9 @@ public class RxJavaWeatherActivity extends AppCompatActivity implements View.OnC
 */
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
+
+ 合并多个Observables，让没有错误的Observable都完成后再发射错误通知
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
@@ -1143,6 +1164,32 @@ Next:11
 
  值得注意的是，如果源Observable产生的最后一个结果后在规定的时间间隔内调用了onCompleted，那么通过debounce操作符也会把这个结果提交给订阅者。
 
+ 使用debounce做textSearch
+
+ 用简单的话讲就是当N个结点发生的时间太靠近（即发生的时间差小于设定的值T），debounce就会自动过滤掉前N-1个结点。
+
+ 比如在做百度地址联想的时候，可以使用debounce减少频繁的网络请求。避免每输入（删除）一个字就做一次联想
+
+ RxTextView.textChangeEvents(inputEditText)
+      .debounce(400, TimeUnit.MILLISECONDS)
+      .observeOn(AndroidSchedulers.mainThread())
+      .subscribe(new Observer<TextViewTextChangeEvent>() {
+    @Override
+    public void onCompleted() {
+        log.d("onComplete");
+    }
+
+    @Override
+    public void onError(Throwable e) {
+        log.d("Error");
+    }
+
+    @Override
+    public void onNext(TextViewTextChangeEvent onTextChangeEvent) {
+        log.d(format("Searching for %s", onTextChangeEvent.text().toString()));
+    }
+});
+
  Observable.create(new Observable.OnSubscribe<Integer>() {
             @Override
             public void call(Subscriber<? super Integer> subscriber) {
@@ -1187,6 +1234,9 @@ Next:11
  Next:9
  completed!
  */
+
+
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1691,4 +1741,195 @@ Sequence complete.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
+ 五、使用combineLatest合并最近N个结点
+ 例如：注册的时候所有输入信息（邮箱、密码、电话号码等）合法才点亮注册按钮。
+
+ 当两个Observables中的任何一个发射了一个数据时，通过一个指定的函数组合每个Observable发射的最新数据（一共两个数据），然后发射这个函数的结果
+
+ Observable<CharSequence> _emailChangeObservable = RxTextView.textChanges(_email).skip(1);
+Observable<CharSequence> _passwordChangeObservable = RxTextView.textChanges(_password).skip(1);
+Observable<CharSequence>   _numberChangeObservable = RxTextView.textChanges(_number).skip(1);
+
+Observable.combineLatest(_emailChangeObservable,
+              _passwordChangeObservable,
+              _numberChangeObservable,
+              new Func3<CharSequence, CharSequence, CharSequence, Boolean>() {
+                  @Override
+                  public Boolean call(CharSequence newEmail,
+                                      CharSequence newPassword,
+                                      CharSequence newNumber) {
+
+                      Log.d("xiayong",newEmail+" "+newPassword+" "+newNumber);
+                      boolean emailValid = !isEmpty(newEmail) &&
+                                           EMAIL_ADDRESS.matcher(newEmail).matches();
+                      if (!emailValid) {
+                          _email.setError("Invalid Email!");
+                      }
+
+                      boolean passValid = !isEmpty(newPassword) && newPassword.length() > 8;
+                      if (!passValid) {
+                          _password.setError("Invalid Password!");
+                      }
+
+                      boolean numValid = !isEmpty(newNumber);
+                      if (numValid) {
+                          int num = Integer.parseInt(newNumber.toString());
+                          numValid = num > 0 && num <= 100;
+                      }
+                      if (!numValid) {
+                          _number.setError("Invalid Number!");
+                      }
+
+                      return emailValid && passValid && numValid;
+
+                  }
+              })//
+              .subscribe(new Observer<Boolean>() {
+                  @Override
+                  public void onCompleted() {
+                      log.d("completed");
+                  }
+
+                  @Override
+                  public void onError(Throwable e) {
+                     log.d("Error");
+                  }
+
+                  @Override
+                  public void onNext(Boolean formValid) {
+                     _btnValidIndicator.setEnabled(formValid);
+                  }
+              });
+
+
+
+//产生0,5,10,15,20数列
+        Observable<Long> observable1 = Observable.timer(0, 1000, TimeUnit.MILLISECONDS)
+                .map(new Func1<Long, Long>() {
+                    @Override
+                    public Long call(Long aLong) {
+                        return aLong * 5;
+                    }
+                }).take(5);
+
+        //产生0,10,20,30,40数列
+        Observable<Long> observable2 = Observable.timer(500, 1000, TimeUnit.MILLISECONDS)
+                .map(new Func1<Long, Long>() {
+                    @Override
+                    public Long call(Long aLong) {
+                        return aLong * 10;
+                    }
+                }).take(5);
+
+
+        Observable.combineLatest(observable1, observable2, new Func2<Long, Long, Long>() {
+            @Override
+            public Long call(Long aLong, Long aLong2) {
+                return aLong+aLong2;
+            }
+        }).subscribe(new Subscriber<Long>() {
+            @Override
+            public void onCompleted() {
+                System.out.println("Sequence complete.");
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                System.err.println("Error: " + e.getMessage());
+            }
+
+            @Override
+            public void onNext(Long aLong) {
+                System.out.println("Next: " + aLong);
+            }
+        });
+
+ 运行结果如下：
+ Next: 0
+ Next: 5
+ Next: 15
+ Next: 20
+ Next: 30
+ Next: 35
+ Next: 45
+ Next: 50
+ Next: 60
+ Sequence complete.
  */
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/**
+
+ 使用merge合并两个数据源。
+
+ 例如一组数据来自网络，一组数据来自文件，需要合并两组数据一起展示。
+
+ Observable.merge(getDataFromFile(), getDataFromNet())
+              .observeOn(AndroidSchedulers.mainThread())
+              .subscribe(new Subscriber<String>() {
+                  @Override
+                  public void onCompleted() {
+                      log.d("done loading all data");
+                  }
+
+                  @Override
+                  public void onError(Throwable e) {
+                      log.d("error");
+                  }
+
+                  @Override
+                  public void onNext(String data) {
+                      log.d("all merged data will pass here one by one!")
+              });
+ */
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/**
+
+ 使用throttleFirst防止按钮重复点击
+
+ ps：debounce也能达到同样的效果
+
+ RxView.clicks(button)
+              .throttleFirst(1, TimeUnit.SECONDS)
+              .subscribe(new Observer<Object>() {
+                  @Override
+                  public void onCompleted() {
+                        log.d ("completed");
+                  }
+
+                  @Override
+                  public void onError(Throwable e) {
+                        log.e("error");
+                  }
+
+                  @Override
+                  public void onNext(Object o) {
+                       log.d("button clicked");
+                  }
+              });
+////////////////////////////
+ Button button = ...;
+ RxView.clickEvents(button) // 以 Observable 形式来反馈点击事件
+    .subscribe(new Action1<ViewClickEvent>() {
+        @Override
+        public void call(ViewClickEvent event) {
+            // Click handling
+        }
+    });
+
+
+ RxView.clickEvents(button)
+    .throttleFirst(500, TimeUnit.MILLISECONDS)
+    .subscribe(clickAction);
+
+ */
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/**

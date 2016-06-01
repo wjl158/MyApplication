@@ -35,7 +35,12 @@ dependencies {
     compile 'com.facebook.fresco:fresco:0.10.0'
     compile 'io.reactivex:rxjava:1.1.5'
     compile 'io.reactivex:rxandroid:1.2.0'
-    compile 'me.tatarka:gradle-retrolambda:3.3.0-beta4'   //retrolambda支持
+    compile 'me.tatarka:gradle-retrolambda:3.3.0-beta4'
+    //retrolambda支持
+    compile 'com.yolanda.nohttp:nohttp:1.0.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
 }
 
 

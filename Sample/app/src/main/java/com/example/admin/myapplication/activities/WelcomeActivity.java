@@ -1,27 +1,16 @@
 package com.example.admin.myapplication.activities;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.ImageView;
+import android.support.v7.app.AppCompatActivity;
 
 import com.example.admin.myapplication.R;
-import com.facebook.drawee.backends.pipeline.Fresco;
-import com.facebook.drawee.interfaces.DraweeController;
-import com.facebook.drawee.view.SimpleDraweeView;
-import com.facebook.imagepipeline.common.ResizeOptions;
-import com.facebook.imagepipeline.request.ImageRequest;
-import com.facebook.imagepipeline.request.ImageRequestBuilder;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Func1;
 
 public class WelcomeActivity extends AppCompatActivity {
 
@@ -49,5 +38,9 @@ public class WelcomeActivity extends AppCompatActivity {
         }).subscribe();
 //
 //        Observable.interval(2, 2, TimeUnit.SECONDS)
+
+
     }
+
+
 }
