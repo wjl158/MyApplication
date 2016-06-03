@@ -17,6 +17,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:numColumns="3"
+        android:divider="@color/text_yellow"
+        android:dividerHeight="1dp"
         />
 
     <android.support.design.widget.CoordinatorLayout

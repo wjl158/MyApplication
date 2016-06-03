@@ -197,6 +197,9 @@ public class MainNavActivity extends BaseActivity {
         mData.add(new Icon(R.drawable.ic_my_08, "41、RxJava"));
         mData.add(new Icon(R.drawable.ic_my_08, "42、RxJava天气"));
 
+        //15
+        mData.add(new Icon(R.drawable.ic_my_18, "43、抽屉DrawerLayout"));
+
 
         //default
         mData.add(new Icon(R.drawable.ic_my_06, "n、其他"));
@@ -373,6 +376,11 @@ public class MainNavActivity extends BaseActivity {
                         break;
                     case 41:
                         intent.setClass(MainNavActivity.this, RxJavaWeatherActivity.class);
+                        break;
+
+                    //15
+                    case 42:
+                        intent.setClass(MainNavActivity.this, DrawerlayoutActivity.class);
                         break;
 
                     default:

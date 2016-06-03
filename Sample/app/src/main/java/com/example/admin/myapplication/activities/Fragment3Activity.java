@@ -36,7 +36,10 @@ public class Fragment3Activity extends BaseActivity {
                 switch (checkedId){
                     case R.id.rb_channel1:
                         if(fg1 == null){
-                            fg1 = new FragmentTwo("第一个Fragment");
+                            fg1 = new FragmentTwo();
+                            Bundle bundle = new Bundle();
+                            bundle.putString("value", "第一个Fragment");
+                            fg1.setArguments(bundle);
                             fTransaction.add(R.id.ly_content1,fg1);
                         }else{
                             fTransaction.show(fg1);
@@ -44,7 +47,10 @@ public class Fragment3Activity extends BaseActivity {
                         break;
                     case R.id.rb_message1:
                         if(fg2 == null){
-                            fg2 = new FragmentTwo("第二个Fragment");
+                            fg2 = new FragmentTwo();
+                            Bundle bundle = new Bundle();
+                            bundle.putString("value", "第二个Fragment");
+                            fg2.setArguments(bundle);
                             fTransaction.add(R.id.ly_content1,fg2);
                         }else{
                             fTransaction.show(fg2);
@@ -52,7 +58,10 @@ public class Fragment3Activity extends BaseActivity {
                         break;
                     case R.id.rb_better1:
                         if(fg3 == null){
-                            fg3 = new FragmentTwo("第三个Fragment");
+                            fg3 = new FragmentTwo();
+                            Bundle bundle = new Bundle();
+                            bundle.putString("value", "第三个Fragment");
+                            fg3.setArguments(bundle);
                             fTransaction.add(R.id.ly_content1,fg3);
                         }else{
                             fTransaction.show(fg3);
@@ -60,7 +69,10 @@ public class Fragment3Activity extends BaseActivity {
                         break;
                     case R.id.rb_setting1:
                         if(fg4 == null){
-                            fg4 = new FragmentTwo("第四个Fragment");
+                            fg4 = new FragmentTwo();
+                            Bundle bundle = new Bundle();
+                            bundle.putString("value", "第四个Fragment");
+                            fg4.setArguments(bundle);
                             fTransaction.add(R.id.ly_content1,fg4);
                         }else{
                             fTransaction.show(fg4);

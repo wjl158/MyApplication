@@ -53,7 +53,10 @@ public class Fragment2Activity extends BaseActivity {
                         setSelected();
                         txt_channel.setSelected(true);
                         if(fg1 == null){
-                            fg1 = new FragmentTwo("第一个Fragment");
+                            fg1 = new FragmentTwo();
+                            Bundle bundle = new Bundle();
+                            bundle.putString("value", "第一个Fragment");
+                            fg1.setArguments(bundle);
                             fTransaction.add(R.id.ly_content,fg1);
                         }else{
                             fTransaction.show(fg1);
@@ -63,7 +66,10 @@ public class Fragment2Activity extends BaseActivity {
                         setSelected();
                         txt_message.setSelected(true);
                         if(fg2 == null){
-                            fg2 = new FragmentTwo("第二个Fragment");
+                            fg2 = new FragmentTwo();
+                            Bundle bundle = new Bundle();
+                            bundle.putString("value", "第二个Fragment");
+                            fg2.setArguments(bundle);
                             fTransaction.add(R.id.ly_content,fg2);
                         }else{
                             fTransaction.show(fg2);
@@ -73,7 +79,10 @@ public class Fragment2Activity extends BaseActivity {
                         setSelected();
                         txt_better.setSelected(true);
                         if(fg3 == null){
-                            fg3 = new FragmentTwo("第三个Fragment");
+                            fg3 = new FragmentTwo();
+                            Bundle bundle = new Bundle();
+                            bundle.putString("value", "第三个Fragment");
+                            fg3.setArguments(bundle);
                             fTransaction.add(R.id.ly_content,fg3);
                         }else{
                             fTransaction.show(fg3);
@@ -83,7 +92,10 @@ public class Fragment2Activity extends BaseActivity {
                         setSelected();
                         txt_setting.setSelected(true);
                         if(fg4 == null){
-                            fg4 = new FragmentTwo("第四个Fragment");
+                            fg4 = new FragmentTwo();
+                            Bundle bundle = new Bundle();
+                            bundle.putString("value", "第四个Fragment");
+                            fg4.setArguments(bundle);
                             fTransaction.add(R.id.ly_content,fg4);
                         }else{
                             fTransaction.show(fg4);
