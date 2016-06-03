@@ -199,6 +199,7 @@ public class MainNavActivity extends BaseActivity {
 
         //15
         mData.add(new Icon(R.drawable.ic_my_18, "43、抽屉DrawerLayout"));
+        mData.add(new Icon(R.drawable.ic_my_18, "44、图片轮播"));
 
 
         //default
@@ -382,6 +383,10 @@ public class MainNavActivity extends BaseActivity {
                     case 42:
                         intent.setClass(MainNavActivity.this, DrawerlayoutActivity.class);
                         break;
+                    case 43:
+                        intent.setClass(MainNavActivity.this, RollviewActivity.class);
+                        break;
+
 
                     default:
                         intent.setClass(MainNavActivity.this, MainActivity.class);

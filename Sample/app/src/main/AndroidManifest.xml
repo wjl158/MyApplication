@@ -84,7 +84,8 @@
         <activity android:name=".activities.FrescoList1Activity" />
         <activity android:name=".activities.RxJavaActivity" />
         <activity android:name=".activities.RxJavaWeatherActivity" />
-        <activity android:name=".activities.DrawerlayoutActivity"></activity>
+        <activity android:name=".activities.DrawerlayoutActivity" />
+        <activity android:name=".activities.RollviewActivity"></activity>
     </application>
 
 </manifest>
