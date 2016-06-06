@@ -11,11 +11,19 @@
 
     <com.example.admin.myapplication.view.MyCustomView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="200dp"
+        android:id="@+id/lv_activity_custom_view_pull">
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"></ListView>
 
     </com.example.admin.myapplication.view.MyCustomView>
+
+    <com.example.admin.myapplication.view.MyToggleButton
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/lv_activity_custom_view_pull">
+
+    </com.example.admin.myapplication.view.MyToggleButton>
 
 </RelativeLayout>

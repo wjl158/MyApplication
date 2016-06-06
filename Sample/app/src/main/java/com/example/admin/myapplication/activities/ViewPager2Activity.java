@@ -45,7 +45,7 @@ public class ViewPager2Activity extends BaseActivity {
         tv_one = (TextView) findViewById(R.id.tv_one);
         tv_two = (TextView) findViewById(R.id.tv_two);
         tv_three = (TextView) findViewById(R.id.tv_three);
-        img_cursor = (ImageView) findViewById(R.id.img_cursor);
+        img_cursor = (ImageView) findViewById(R.id.img_cursor);  //滑动条
 
         //下划线动画的相关设置：
         bmpWidth = BitmapFactory.decodeResource(getResources(), R.drawable.line).getWidth();// 获取图片宽度
@@ -53,9 +53,12 @@ public class ViewPager2Activity extends BaseActivity {
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         int screenW = dm.widthPixels;// 获取分辨率宽度
         offset = (screenW / 3 - bmpWidth) / 2;// 计算偏移量
+
+        //其实这几句并没有什么卵用
         Matrix matrix = new Matrix();
         matrix.postTranslate(offset, 0);
         img_cursor.setImageMatrix(matrix);// 设置动画初始位置
+
         //移动的距离
         one = offset * 2 + bmpWidth;// 移动一页的偏移量,比如1->2,或者2->3
         two = one * 2;// 移动两页的偏移量,比如1直接跳3

@@ -25,22 +25,24 @@ public class RollviewActivity extends AppCompatActivity {
         mRollViewPager.setPlayDelay(2000);
         mRollViewPager.setAdapter(mLoopAdapter = new TestLoopAdapter(mRollViewPager));
 //        mRollViewPager.setAdapter(new TestNomalAdapter());
+
         mRollViewPager.setHintView(new IconHintView(this,R.drawable.point_focus,R.drawable.point_normal));
         //mRollViewPager.setHintView(new ColorPointHintView(this, Color.YELLOW,Color.WHITE));
         //mRollViewPager.setHintView(new TextHintView(this));
         //mRollViewPager.setHintView(null);
-        findViewById(R.id.minus).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mLoopAdapter.minus();
-            }
-        });
-        findViewById(R.id.add).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mLoopAdapter.add();
-            }
-        });
+
+//        findViewById(R.id.minus).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                mLoopAdapter.minus();
+//            }
+//        });
+//        findViewById(R.id.add).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                mLoopAdapter.add();
+//            }
+//        });
     }
 
 
