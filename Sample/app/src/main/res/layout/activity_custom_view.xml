@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.admin.myapplication.activities.CustomViewActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.example.admin.myapplication.view.MyCustomView
         android:layout_width="match_parent"
@@ -22,8 +22,25 @@
     <com.example.admin.myapplication.view.MyToggleButton
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_below="@+id/lv_activity_custom_view_pull">
+        android:layout_below="@+id/lv_activity_custom_view_pull"
+        app:current_state="false"
+        app:backgroundBitmap="@drawable/js7"
+        app:slideButton="@drawable/partner_red"
+        test_text="测试不需要XML资源文件的方式来使用自定义属性"
+        android:id="@+id/lv_activity_custom_view_MyToggleButton">
 
     </com.example.admin.myapplication.view.MyToggleButton>
+
+    <com.example.admin.myapplication.view.WaterWave
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/lv_activity_custom_view_MyToggleButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:text="水波效果"/>
 
 </RelativeLayout>

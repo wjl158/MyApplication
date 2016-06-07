@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MyToggleButton">
+        <attr name="current_state" format="boolean" />
+        <attr name="backgroundBitmap" format="reference" />
+        <attr name="slideButton" format="reference" />
+    </declare-styleable>
+
+</resources>
+
+
+<!--文件的名称不一定要是attrs.xml-->
+<!--一般一个自定义view的属性放在一个declare-styleable里-->
+
+    <!--1.reference:参考指定Theme中资源ID,这个类型意思就是你传的值可以是引用资源-->
+    <!--2.string:字符串,如果你想别人既能直接写值也可以用类似"@string/test"引用资源的方式,可以写成format="string|reference"-->
+    <!--3.Color：颜色-->
+    <!--4.boolean：布尔值-->
+    <!--5.dimension：尺寸值-->
+    <!--6.float：浮点型-->
+    <!--7.integer：整型-->
+    <!--8.fraction：百分数-->
+    <!--9.enum：枚举 ,如果你提供的属性只能让别人选择,不能随便传入,就可以写成这样-->
+        <!--<attr name="language">-->
+        <!--<enum name="china" value="1"/>-->
+        <!--<enum name="English" value="2"/>-->
+        <!--</attr>-->
+    <!--10.flag：位或运算-->
+
+    <!--上面的属性资源文件定义了该属性之后，至于到底是哪个自定义View组件中来使用该属性,该属性到底能发挥什么作用, -->
+    <!--就不归该属性资源文件管了,也就是说这个属性资源文件是个公共的,大家都可以用，但是为了方便管理，-->
+    <!--一般都是一个自定义View里的属性写成一个declare-styleable集合.属性资源所定义的属性到底可以返回什么作用,取决于自定义组件的代码实现-->

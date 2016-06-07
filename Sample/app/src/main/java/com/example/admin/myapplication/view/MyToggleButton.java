@@ -1,10 +1,12 @@
 package com.example.admin.myapplication.view;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.drawable.BitmapDrawable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -41,7 +43,7 @@ public class MyToggleButton extends View {
     private int secondX;
 
 
-    final private  int MAX_LEFT_DISTANCE = 274;
+    final private  int MAX_LEFT_DISTANCE = 137;
 
 
     /**
@@ -78,7 +80,7 @@ public class MyToggleButton extends View {
      */
     public MyToggleButton(Context context, AttributeSet attrs) {
         super(context, attrs);
-        initView();
+        initView(context, attrs);
     }
 
     /**
@@ -119,11 +121,54 @@ public class MyToggleButton extends View {
     /**
      * 初始化view
      */
-    private void initView() {
-        backgroundBitmap = BitmapFactory.decodeResource(getResources(),
-                R.drawable.est);
-        slideButton = BitmapFactory.decodeResource(getResources(),
-                R.drawable.bg_num);
+    private void initView(Context context, AttributeSet attrs) {
+
+        //////////////////////////////////////////////////////////////////////////////////
+        //
+        //        backgroundBitmap = BitmapFactory.decodeResource(getResources(),
+        //                R.drawable.est);
+        //        slideButton = BitmapFactory.decodeResource(getResources(),
+        //                R.drawable.bg_num);
+        /////////////////////////////////////////////////////////////////////////////////
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////
+        // 无命名空间测试，无atrtrs.XML测试
+        String attributeValue = attrs.getAttributeValue(null, "test_text");
+        //System.out.println(attributeValue);
+        Log.e(attributeValue, attributeValue);
+        ///////////////////////////////////////////////////////////////////////////////////////
+
+        //有命名空间测试，有atrtrs.XML测试
+        /*这里取得declare-styleable集合*/
+        TypedArray typedArray = context.obtainStyledAttributes(attrs,
+                R.styleable.MyToggleButton);
+
+        /*取得本集合里面总共有多少个属性，（有多少个属性被定义在drawable的XML里）*/
+        int indexCount = typedArray.getIndexCount();
+
+        /*遍历这些属性，拿到属性对应的id，然后通过id拿到对应的值*/
+        for (int i = 0; i < indexCount; i++) {
+
+             /*拿到对应的id值taId*/
+            int taId = typedArray.getIndex(i);
+            switch (taId) {
+                case R.styleable.MyToggleButton_backgroundBitmap:
+                    // drawable转bitmap
+                    backgroundBitmap = ((BitmapDrawable) typedArray.getDrawable(taId)).getBitmap();
+                    break;
+                case R.styleable.MyToggleButton_current_state:
+                    currentState = typedArray.getBoolean(taId, false);
+
+                    break;
+
+                case R.styleable.MyToggleButton_slideButton:
+                    slideButton = ((BitmapDrawable) typedArray.getDrawable(taId)).getBitmap();
+                default:
+                    break;
+            }
+
+        }
 
         /*
          * 点击事件

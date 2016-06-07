@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.admin.myapplication.activities.FloatingActionButtonActivity"
+    android:id="@+id/lv_activity_floating_action_button_root">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/lv_activity_floating_action_button_line">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/js7"
+            android:id="@+id/img_activity_floating_action_button_img"
+            android:scaleType="fitStart"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="有点意思"
+            android:gravity="center_horizontal|bottom"/>
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/partner_red"
+        app:rippleColor="@color/text_gray"
+        app:layout_anchor="@id/img_activity_floating_action_button_img"
+        app:layout_anchorGravity="bottom|right|end"
+        android:onClick="floatbtnClick"
+        android:clickable="true"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/partner_red"
+        app:rippleColor="@color/text_gray"
+        app:layout_anchor="@id/lv_activity_floating_action_button_line"
+        app:layout_anchorGravity="bottom|right|end"
+        android:onClick="floatbtnClick"
+        android:clickable="true"
+        />
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+    <!--对齐方式-->
+    <!--app:layout_anchor="@id/img_activity_floating_action_button_img"-->
+    <!--app:layout_anchorGravity="bottom|right|end"-->
+
+

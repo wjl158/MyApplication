@@ -85,7 +85,9 @@
         <activity android:name=".activities.RxJavaActivity" />
         <activity android:name=".activities.RxJavaWeatherActivity" />
         <activity android:name=".activities.DrawerlayoutActivity" />
-        <activity android:name=".activities.RollviewActivity"></activity>
+        <activity android:name=".activities.RollviewActivity" />
+        <activity android:name=".activities.FloatingActionButtonActivity" />
+        <activity android:name=".activities.MDToolbarActivity"></activity>
     </application>
 
 </manifest>

@@ -31,18 +31,18 @@ public class RollviewActivity extends AppCompatActivity {
         //mRollViewPager.setHintView(new TextHintView(this));
         //mRollViewPager.setHintView(null);
 
-//        findViewById(R.id.minus).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                mLoopAdapter.minus();
-//            }
-//        });
-//        findViewById(R.id.add).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                mLoopAdapter.add();
-//            }
-//        });
+        findViewById(R.id.minus).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mLoopAdapter.minus();
+            }
+        });
+        findViewById(R.id.add).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mLoopAdapter.add();
+            }
+        });
     }
 
 

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Menu file for `activity_movies.xml` is located in a file
+     such as `res/menu/menu_movies.xml`  -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/miCompose"
+        android:icon="@drawable/partner_red"
+        app:showAsAction="ifRoom"
+        android:title="Compose"
+        android:onClick="onComposeAction">
+    </item>
+    <item
+        android:id="@+id/miProfile"
+        android:icon="@drawable/ic_my_02"
+        app:showAsAction="ifRoom|withText"
+        android:title="Profile"
+        android:onClick="onComposeAction">
+    </item>
+
+    <item
+        android:id="@+id/miProfile1"
+        android:icon="@drawable/ic_my_02"
+        app:showAsAction="ifRoom|withText"
+        android:title="Profile">
+    </item>
+
+    <item
+        android:id="@+id/miProfile2"
+        android:icon="@drawable/ic_my_02"
+        app:showAsAction="ifRoom|withText"
+        android:title="Profile">
+    </item>
+
+    <item
+        android:id="@+id/miProfile3"
+        android:icon="@drawable/ic_my_02"
+        app:showAsAction="ifRoom|withText"
+        android:title="Profile">
+    </item>
+
+    <item
+        android:id="@+id/miProfile4"
+        android:icon="@drawable/ic_my_02"
+        app:showAsAction="ifRoom|withText"
+        android:title="Profile">
+    </item>
+</menu>
