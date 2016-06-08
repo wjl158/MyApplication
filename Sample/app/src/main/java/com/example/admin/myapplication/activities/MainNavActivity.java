@@ -165,7 +165,7 @@ public class MainNavActivity extends BaseActivity {
 
         //8
         mData.add(new Icon(R.drawable.ic_my_22, "22、工具栏"));
-        mData.add(new Icon(R.drawable.ic_my_23, "23、Layout"));
+        mData.add(new Icon(R.drawable.ic_my_23, "23、TabLayout"));
         mData.add(new Icon(R.drawable.ic_my_24, "24、折叠导航"));
 
         //9

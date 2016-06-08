@@ -6,16 +6,27 @@ android:layout_height="match_parent"
 xmlns:app="http://schemas.android.com/apk/res-auto"
 tools:context=".activities.TabLayoutActivity">
 
-<android.support.design.widget.TabLayout
-android:id="@+id/tl"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-app:tabIndicatorColor="@color/text_yellow"
-app:tabSelectedTextColor="#FF0000"
-app:tabTextColor="@color/white"
-app:tabMode="fixed"
-app:tabBackground="@color/text_gray"
-app:tabGravity="fill"/>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/text_yellow"
+        app:tabSelectedTextColor="@color/text_yellow"
+        app:tabTextColor="@color/white"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabBackground="@color/text_gray"
+        android:layout_alignParentTop="true"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tl"
+        android:id="@+id/vp_activity_tab_layout_vp"
+        >
+
+    </android.support.v4.view.ViewPager>
 
 
 </RelativeLayout>
