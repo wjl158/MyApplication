@@ -87,7 +87,8 @@
         <activity android:name=".activities.DrawerlayoutActivity" />
         <activity android:name=".activities.RollviewActivity" />
         <activity android:name=".activities.FloatingActionButtonActivity" />
-        <activity android:name=".activities.MDToolbarActivity"></activity>
+        <activity android:name=".activities.MDToolbarActivity" />
+        <activity android:name=".activities.NavigationViewActivity"></activity>
     </application>
 
 </manifest>

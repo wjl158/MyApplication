@@ -205,6 +205,7 @@ public class MainNavActivity extends BaseActivity {
 
         //16
         mData.add(new Icon(R.drawable.ic_my_20, "46、MD-Toolbar"));
+        mData.add(new Icon(R.drawable.ic_my_20, "47、MD-NavigationView"));
 
 
 
@@ -399,6 +400,9 @@ public class MainNavActivity extends BaseActivity {
                     //16
                     case 45:
                         intent.setClass(MainNavActivity.this, MDToolbarActivity.class);
+                        break;
+                    case 46:
+                        intent.setClass(MainNavActivity.this, NavigationViewActivity.class);
                         break;
 
 
