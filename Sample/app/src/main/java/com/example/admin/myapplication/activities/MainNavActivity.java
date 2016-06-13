@@ -206,8 +206,11 @@ public class MainNavActivity extends BaseActivity {
         //16
         mData.add(new Icon(R.drawable.ic_my_20, "46、MD-Toolbar"));
         mData.add(new Icon(R.drawable.ic_my_20, "47、MD-NavigationView"));
+        mData.add(new Icon(R.drawable.ic_my_20, "48、MD-AppBarLayout"));
 
-
+        //17
+        mData.add(new Icon(R.drawable.ic_my_20, "49、MD-AppBarLayout1"));
+        mData.add(new Icon(R.drawable.ic_my_20, "50、MD-TextInputLayout"));
 
         //default
         mData.add(new Icon(R.drawable.ic_my_06, "n、其他"));
@@ -404,7 +407,17 @@ public class MainNavActivity extends BaseActivity {
                     case 46:
                         intent.setClass(MainNavActivity.this, NavigationViewActivity.class);
                         break;
+                    case 47:
+                        intent.setClass(MainNavActivity.this, MDAppBarLayoutActivity.class);
+                        break;
 
+                    //17
+                    case 48:
+                        intent.setClass(MainNavActivity.this, MDAppBarLayout1Activity.class);
+                        break;
+                    case 49:
+                        intent.setClass(MainNavActivity.this, TextInputLayoutActivity.class);
+                        break;
 
                     default:
                         intent.setClass(MainNavActivity.this, MainActivity.class);

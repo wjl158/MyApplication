@@ -1,10 +1,12 @@
 package com.example.admin.myapplication.activities;
 
 import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.admin.myapplication.R;
 
@@ -17,7 +19,7 @@ public class NavigationViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_view);
 
-        DrawerLayout mDrawerLayout = (DrawerLayout)findViewById(R.id.dl_main_drawer);
+        mDrawerLayout = (DrawerLayout)findViewById(R.id.dl_main_drawer);
 
         NavigationView navigationView = (NavigationView)findViewById(R.id.nv_main_navigation);
 
@@ -32,6 +34,11 @@ public class NavigationViewActivity extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    public void btnClick(View v)
+    {
+        mDrawerLayout.openDrawer(GravityCompat.START);
     }
 
 }

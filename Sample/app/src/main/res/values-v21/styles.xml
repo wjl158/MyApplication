@@ -1,11 +1,37 @@
 <resources>
 
+
+    <!--Material Theme-->
+
+    <!--使用Material主题：-->
+    <!--http://blog.csdn.net/a396901990/article/details/40107881-->
+
+    <!--Material主题只能应用在Android L版本。-->
+    <!--应用Material主题很简单，只需要修改res/values/styles.xml文件，使其继承android:Theme.Material。如下：-->
+    <!--[html] view plain copy print?在CODE上查看代码片派生到我的代码片-->
+    <!--&lt;!&ndash; res/values/styles.xml &ndash;&gt;-->
+    <!--<resources>-->
+        <!--&lt;!&ndash; your app's theme inherits from the Material theme &ndash;&gt;-->
+        <!--<style name="AppTheme" parent="android:Theme.Material">-->
+            <!--&lt;!&ndash; theme customizations &ndash;&gt;-->
+        <!--</style>-->
+    <!--</resources>-->
+    <!--或者在AndroidManifest.xml中直接设置主题：-->
+    <!--[html] view plain copy print?在CODE上查看代码片派生到我的代码片-->
+    <!--android:theme="@android:style/Theme.Material.Light"-->
+
+    <!--兼容性：-->
+
+    <!--由于Material Theme只可以在Android L Developer Preview中使用。-->
+    <!--所以在低版本使用的话就需要为其另设一套主题：-->
+    <!--在老版本使用一套主题 res/values/styles.xml，在新版本使用Material主题res/values-v21/styles.xml.-->
+
     Base application theme.
     <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/text_yellow</item>
         <item name="colorPrimaryDark">@android:color/black</item>
-        <item name="colorAccent">@color/text_yellow</item>
+        <item name="colorAccent">@color/text_gray</item>
     </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>

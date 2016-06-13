@@ -7,8 +7,22 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp" -->
+        <!--android:text="呕 我的上帝"/>-->
     <!-- 你的内容布局-->
-    <include layout="@layout/page_help_one"/>
+    <!--<include layout="@layout/page_help_one"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="呕 我的上帝"
+            android:onClick="btnClick"/>
+    </LinearLayout>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nv_main_navigation"

@@ -88,7 +88,10 @@
         <activity android:name=".activities.RollviewActivity" />
         <activity android:name=".activities.FloatingActionButtonActivity" />
         <activity android:name=".activities.MDToolbarActivity" />
-        <activity android:name=".activities.NavigationViewActivity"></activity>
+        <activity android:name=".activities.NavigationViewActivity" />
+        <activity android:name=".activities.MDAppBarLayoutActivity" />
+        <activity android:name=".activities.TextInputLayoutActivity" />
+        <activity android:name=".activities.MDAppBarLayout1Activity"></activity>
     </application>
 
 </manifest>

@@ -4,29 +4,29 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_home_tarento"
+            android:icon="@drawable/ic_follow_both"
             android:title="CC Talk"/>
         <item
             android:id="@+id/nav_messages"
-            android:icon="@drawable/ic_my_02"
+            android:icon="@drawable/drafts"
             android:title="HJ Class"/>
         <item
             android:id="@+id/nav_friends"
-            android:icon="@drawable/icon_add"
+            android:icon="@drawable/point_focus"
             android:title="Words"/>
         <item
             android:id="@+id/nav_discussion"
-            android:icon="@drawable/icon_add"
+            android:icon="@drawable/circle_pause"
             android:title="Big HJ"/>
     </group>
 
     <item android:title="Version">
         <menu>
             <item
-                android:icon="@drawable/icon_add"
+                android:icon="@drawable/download"
                 android:title="Android"/>
             <item
-                android:icon="@drawable/icon_add"
+                android:icon="@drawable/circle_play"
                 android:title="iOS"/>
         </menu>
     </item>

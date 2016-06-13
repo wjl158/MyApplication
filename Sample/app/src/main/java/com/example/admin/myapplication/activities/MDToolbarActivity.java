@@ -1,19 +1,34 @@
 package com.example.admin.myapplication.activities;
 
+import android.net.Uri;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.example.admin.myapplication.R;
+import com.example.admin.myapplication.view.DividerGridItemDecoration;
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.drawee.view.SimpleDraweeView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MDToolbarActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_mdtoolbar);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.tb_activity_mdtoolbar_toolbar);
@@ -26,6 +41,9 @@ public class MDToolbarActivity extends AppCompatActivity {
         toolbar.setSubtitle("今天天气不错");
 
         setSupportActionBar(toolbar);
+
+
+
     }
 
     @Override
@@ -61,4 +79,7 @@ public class MDToolbarActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+
+
 }
