@@ -23,6 +23,31 @@ import com.example.admin.myapplication.R;
  * 5、需要绘制出所需要显示的view，那么需要重写onDraw方法
  * 6、当控件状态改变的时候，需要重绘view，那么调用invalidate();方法，这个方法实际上会重新调用onDraw方法
  * 7、在这其中，如果需要对view设置点击事件，可以直接调用setOnClickListener方法
+ *
+ * 可以说重载onMeasure()，onLayout()，onDraw()三个函数构建了自定义View的外观形象。再加上onTouchEvent()等重载视图的行为，可以构建任何我们需要的可感知到的自定义View。
+ * 本节我们探索自定义View中onMeasure()起到了什么样的作用，题外要插的一句是，Activity框架，View框架中大量的on函数基本上都应用到了Template模式，
+ * 掌握这一模式对于理解这些框架大有裨益。
+ * 我们知道，不管是自定义View还是系统提供的TextView这些，它们都必须放置在LinearLayout等一些ViewGroup中，
+ * 因此理论上我们可以很好的理解onMeasure()，onLayout()，onDraw()这三个函数：1.View本身大小多少，这由onMeasure()决定；
+ * 2.View在ViewGroup中的位置如何，这由onLayout()决定；3.绘制View，onDraw()定义了如何绘制这个View。
+ *
+ *
+ * onMeasure(int widthMeasureSpec, int heightMeasureSpec)
+ *
+ * http://blog.csdn.net/pi9nc/article/details/18764863
+ * http://blog.csdn.net/yuhailong626/article/details/20639217
+ * 首先我们要理解的是widthMeasureSpec, heightMeasureSpec这两个参数是从哪里来的？
+ * onMeasure()函数由包含这个View的具体的ViewGroup调用，因此值也是从这个ViewGroup中传入的。
+ * 这里我直接给出答案：子类View的这两个参数，由ViewGroup中的layout_width，layout_height和padding以及View自身的layout_margin共同决定。
+ * 权值weight也是尤其需要考虑的因素，有它的存在情况可能会稍微复杂点。
+ * 1.精确模式（MeasureSpec.EXACTLY）
+ * 在这种模式下，尺寸的值是多少，那么这个组件的长或宽就是多少。
+ * 2.最大模式（MeasureSpec.AT_MOST）
+ * 这个也就是父组件，能够给出的最大的空间，当前组件的长或宽最大只能为这么大，当然也可以比这个小。子视图的大小最多是specSize中指定的值，也就是说不建议子视图的大小超过specSize中给定的值。
+ * 3.未指定模式（MeasureSpec.UNSPECIFIED）
+ * 这个就是说，当前组件，可以随便用空间，不受限制。
+ * 从这里我们基本上可以看出了MATCH_PARENT对应于EXACTLY，WRAP_CONTENT对应于AT_MOST，其他情况也对应于EXACTLY，
+ * 它和MATCH_PARENT的区别在于size值不一样。现在我们需要知道这个rootDimension即lp.height对应于什么。
  */
 
 public class MyToggleButton extends View {
