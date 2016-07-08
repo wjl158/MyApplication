@@ -211,6 +211,7 @@ public class MainNavActivity extends BaseActivity {
         //17
         mData.add(new Icon(R.drawable.ic_my_20, "49、MD-AppBarLayout1"));
         mData.add(new Icon(R.drawable.ic_my_20, "50、MD-TextInputLayout"));
+        mData.add(new Icon(R.drawable.ic_my_01, "51、Retrofit图片上传"));
 
         //default
         mData.add(new Icon(R.drawable.ic_my_06, "n、其他"));
@@ -417,6 +418,9 @@ public class MainNavActivity extends BaseActivity {
                         break;
                     case 49:
                         intent.setClass(MainNavActivity.this, TextInputLayoutActivity.class);
+                        break;
+                    case 50:
+                        intent.setClass(MainNavActivity.this, RetrofitImgUploadActivity.class);
                         break;
 
                     default:

@@ -27,6 +27,7 @@ public class FrescoDemoActivity extends AppCompatActivity {
 
         //加载本地资源图片
         SimpleDraweeView draweeView2 = (SimpleDraweeView) findViewById(R.id.sdv_activity_fresco_demo_img2);
-        draweeView2.setImageURI(Uri.parse("res://com.example.admin.myapplication/" + R.drawable.js8));
+//        draweeView2.setImageURI(Uri.parse("res://com.example.admin.myapplication/" + R.drawable.js8));
+        draweeView2.setImageURI(Uri.parse("http://192.168.4.43/upload/download1.php"));
     }
 }
