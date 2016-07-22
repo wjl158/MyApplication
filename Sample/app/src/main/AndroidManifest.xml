@@ -93,7 +93,8 @@
         <activity android:name=".activities.MDAppBarLayoutActivity" />
         <activity android:name=".activities.TextInputLayoutActivity" />
         <activity android:name=".activities.MDAppBarLayout1Activity" />
-        <activity android:name=".activities.RetrofitImgUploadActivity"></activity>
+        <activity android:name=".activities.RetrofitImgUploadActivity" />
+        <activity android:name=".activities.PictureSelActivity"></activity>
     </application>
 
 </manifest>

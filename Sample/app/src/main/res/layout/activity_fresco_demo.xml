@@ -30,7 +30,7 @@
 
         fresco:fadeDuration="300"
         fresco:actualImageScaleType="focusCrop"
-        fresco:placeholderImage="@color/text_yellow"
+        fresco:placeholderImage="@color/text_gray"
         fresco:placeholderImageScaleType="fitCenter"
         fresco:failureImage="@drawable/js1"
         fresco:failureImageScaleType="centerInside"
