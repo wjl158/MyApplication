@@ -12,6 +12,6 @@
         android:id="@+id/img_activity_welcome_imgMain"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:src="@drawable/js2"
+        android:src="@drawable/welcomebackgroud"
         android:scaleType="centerCrop"/>
 </RelativeLayout>

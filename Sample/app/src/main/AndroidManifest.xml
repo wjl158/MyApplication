@@ -11,6 +11,12 @@
     <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <android:uses-permission android:name="android.permission.INTERNET" />
     <android:uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <android:uses-permission android:name="android.permission.READ_SMS" />
+    <android:uses-permission android:name="android.permission.WRITE_SMS" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_PROFILE" />
 
     <application
         android:name=".Application"
@@ -94,7 +100,9 @@
         <activity android:name=".activities.TextInputLayoutActivity" />
         <activity android:name=".activities.MDAppBarLayout1Activity" />
         <activity android:name=".activities.RetrofitImgUploadActivity" />
-        <activity android:name=".activities.PictureSelActivity"></activity>
+        <activity android:name=".activities.PictureSelActivity" />
+        <activity android:name=".activities.ContentProviderActivity" />
+        <activity android:name=".activities.ThumbnailActivity"></activity>
     </application>
 
 </manifest>

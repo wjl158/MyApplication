@@ -215,6 +215,8 @@ public class MainNavActivity extends BaseActivity {
 
         //18
         mData.add(new Icon(R.drawable.ic_my_20, "52、相册选择"));
+        mData.add(new Icon(R.drawable.ic_my_20, "53、内容提供者-短信"));
+        mData.add(new Icon(R.drawable.ic_my_20, "54、缩略图"));
 
         //default
         mData.add(new Icon(R.drawable.ic_my_06, "n、其他"));
@@ -429,6 +431,12 @@ public class MainNavActivity extends BaseActivity {
                     //18
                     case 51:
                         intent.setClass(MainNavActivity.this, PictureSelActivity.class);
+                        break;
+                    case 52:
+                        intent.setClass(MainNavActivity.this, ContentProviderActivity.class);
+                        break;
+                    case 53:
+                        intent.setClass(MainNavActivity.this, ThumbnailActivity.class);
                         break;
 
                     default:
