@@ -102,7 +102,8 @@
         <activity android:name=".activities.RetrofitImgUploadActivity" />
         <activity android:name=".activities.PictureSelActivity" />
         <activity android:name=".activities.ContentProviderActivity" />
-        <activity android:name=".activities.ThumbnailActivity"></activity>
+        <activity android:name=".activities.ThumbnailActivity" />
+        <activity android:name=".activities.LayoutInflateActivity"></activity>
     </application>
 
 </manifest>

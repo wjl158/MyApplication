@@ -218,6 +218,10 @@ public class MainNavActivity extends BaseActivity {
         mData.add(new Icon(R.drawable.ic_my_20, "53、内容提供者-短信"));
         mData.add(new Icon(R.drawable.ic_my_20, "54、缩略图"));
 
+        //19
+        mData.add(new Icon(R.drawable.ic_my_20, "55、LayoutInflate"));
+
+
         //default
         mData.add(new Icon(R.drawable.ic_my_06, "n、其他"));
 
@@ -437,6 +441,11 @@ public class MainNavActivity extends BaseActivity {
                         break;
                     case 53:
                         intent.setClass(MainNavActivity.this, ThumbnailActivity.class);
+                        break;
+
+                    //18
+                    case 54:
+                        intent.setClass(MainNavActivity.this, LayoutInflateActivity.class);
                         break;
 
                     default:
